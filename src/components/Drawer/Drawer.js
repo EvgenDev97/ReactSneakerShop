@@ -1,10 +1,18 @@
 import React from "react";
-function Drawer() {
+function Drawer(props) {
   return (
-    <div style={{ display: "none" }} className="overlay">
+    <div
+      style={{ display: props.showDrawer ? "block" : "none" }}
+      className="overlay"
+    >
       <div className="drawer">
         <h2>
-          <img src="img/btn-remove.svg" className="removeBtn" alt="Remove" />
+          <img
+            src="img/btn-remove.svg"
+            className="removeBtn"
+            alt="Remove"
+            onClick={() => props.setShowDrawer(false)}
+          />
         </h2>
         <div className="itemList">
           <div className="cartItem ">

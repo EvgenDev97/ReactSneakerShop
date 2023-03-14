@@ -1,5 +1,5 @@
 import React from "react";
-function Header() {
+function Header(props) {
   return (
     <header className="j-flex ">
       <div className="headerLeft">
@@ -12,7 +12,13 @@ function Header() {
       <div>
         <ul className="headerRight j-flex">
           <li>
-            <button></button>
+            <button
+              onClick={() => {
+                props.setShowDrawer((showDrawer) => !showDrawer);
+              }}
+            >
+              {" "}
+            </button>
           </li>
           <li>
             <span>1205</span>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./components/Card/Card";
 import Drawer from "./components/Drawer/Drawer";
 import Header from "./components/Header/Header";
@@ -28,10 +28,11 @@ const arr = [
 ];
 
 function App() {
+  const [showDrawer, setShowDrawer] = useState(false);
   return (
     <div className="wrapper clear">
-      <Drawer />
-      <Header />
+      <Drawer showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
+      <Header showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
       <main>
         <Content />
         <div className="sneakers ">
