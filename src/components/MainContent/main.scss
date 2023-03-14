@@ -1,0 +1,36 @@
+.content {
+    padding: 40px 0px 0px 40px;
+
+    h1 {
+        margin: 0;
+
+    }
+}
+
+main {
+    .sneakers {
+        @include flex-card;
+    }
+
+    .search {
+        @include j-flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .search-block {
+        padding: 0 30px;
+
+        input {
+            border: 1px solid #f3f3f3;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+        img {
+            padding-right: 10px;
+        }
+    }
+}
