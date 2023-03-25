@@ -1,50 +1,34 @@
 import React from "react";
-function Drawer(props) {
+function Drawer({ onClose, items = [] }) {
   return (
-    <div
-      style={{ display: props.showDrawer ? "block" : "none" }}
-      className="overlay"
-    >
+    <div className="overlay">
       <div className="drawer">
         <h2>
           <img
+            onClick={onClose}
             src="img/btn-remove.svg"
             className="removeBtn"
             alt="Remove"
-            onClick={() => props.setShowDrawer(false)}
           />
         </h2>
         <div className="itemList">
-          <div className="cartItem ">
-            <img
-              src="img/sneakers/jpg1.jpg"
-              width={70}
-              height={70}
-              alt="Sneakers"
-            />
-            <div>
-              <p>
-                Men's sneaker <br /> Nike Blazer Mid Suede
-              </p>
-              <b>184.3$</b>
+          {items.map((obj) => (
+            <div className="cartItem ">
+              <div
+                className="cartItemImg"
+                style={{ backgroundImage: `url(${obj.imageUrl})` }}
+              ></div>
+              <div>
+                <p>{obj.title}</p>
+                <b>{obj.price} $</b>
+              </div>
+              <img
+                src="img/btn-remove.svg"
+                className="removeBtn"
+                alt="Remove"
+              />
             </div>
-            <img src="img/btn-remove.svg" className="removeBtn" alt="Remove" />
-          </div>
-          <div className="cartItem ">
-            <img
-              src="img/sneakers/jpg2.jpg"
-              width={70}
-              height={70}
-              alt="Sneakers"
-            />
-            <div>
-              <p>
-                Men's sneaker <br /> Nike Blazer Mid Suede
-              </p>
-              <b>184.3$</b>
-            </div>
-            <img src="img/btn-remove.svg" className="removeBtn" alt="Remove" />
-          </div>
+          ))}
         </div>
 
         <div className="items">

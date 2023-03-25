@@ -36,20 +36,24 @@
         @include c-flex
     }
 
-    .button {
-        border-radius: 8px;
-        border: 1px solid #adaaaa;
-        background-color: white;
-        width: 32px;
-        height: 32px;
-
-        img {
-            width: 10px;
-            height: 10px;
-        }
-
+    .plus{
         cursor: pointer;
     }
+
+    // .button {
+    //     border-radius: 8px;
+    //     border: 1px solid #adaaaa;
+    //     background-color: white;
+    //     width: 32px;
+    //     height: 32px;
+
+    //     img {
+    //         width: 10px;
+    //         height: 10px;
+    //     }
+
+    //     cursor: pointer;
+    // }
 
     align-items: center;
 }

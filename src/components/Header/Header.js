@@ -10,15 +10,9 @@ function Header(props) {
         </div>
       </div>
       <div>
-        <ul className="headerRight j-flex">
+        <ul onClick={props.onClickCart} className="headerRight j-flex">
           <li>
-            <button
-              onClick={() => {
-                props.setShowDrawer((showDrawer) => !showDrawer);
-              }}
-            >
-              {" "}
-            </button>
+            <button></button>
           </li>
           <li>
             <span>1205</span>

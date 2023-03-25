@@ -21,6 +21,14 @@
 
     .itemList {
         overflow: auto; //Scrollbar is displayed when overflowing
+        .cartItemImg {
+                height: 70px;
+                width: 70px;
+                background-size: contain;
+                background-position: 0 -3px;
+                background-repeat: no-repeat;
+                margin-right: 20px;
+            }
     }
 
     h2 {
